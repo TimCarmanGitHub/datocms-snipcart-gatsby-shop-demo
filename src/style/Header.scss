@@ -26,31 +26,6 @@
     text-decoration: none;
     display: block;
     padding: 2px;
-
-    &:after, &:before {
-      content: attr(data-text);
-      position: absolute;
-      top: 0;
-      color: white;
-      background: #663399;
-      overflow: hidden;
-      clip: rect(0,900px,0,0);
-      display: block;
-      padding: 2px;
-    }
-
-    &:after {
-      left: 3px;
-      text-shadow: -2px 0 red;
-      animation: noise-anim 2s infinite linear alternate-reverse;
-    }
-
-    &:before {
-      content:attr(data-text);
-      left: -3px;
-      text-shadow: 2px 0 blue;
-      animation: noise-anim-2 3s infinite linear alternate-reverse;
-    }
   }
 }
 
@@ -74,7 +49,7 @@
 
   @for $i from 0 through $steps {
     #{percentage($i * (1 / $steps))} {
-      clip:rect(random(100) + px, 9999px, random(100) + px, 0);
+      clip: rect(random(100) + px, 9999px, random(100) + px, 0);
     }
   }
 }
@@ -82,9 +57,9 @@
 @keyframes noise-anim-2 {
   $steps: 20;
 
-  @for $i from 0 through $steps{
-    #{percentage($i * (1/$steps))}{
-      clip:rect(random(100) + px, 9999px, random(100) + px, 0);
+  @for $i from 0 through $steps {
+    #{percentage($i * (1/$steps))} {
+      clip: rect(random(100) + px, 9999px, random(100) + px, 0);
     }
   }
 }

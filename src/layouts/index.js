@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 
+
 import '../style/index.scss'
 
 const Layout = ({ children, site }) => (
@@ -19,13 +20,10 @@ const Layout = ({ children, site }) => (
             </h1>
             <div className="Header__summary snipcart-summary snipcart-checkout">
               <div className="Header__summary__title">
-                🛍 MY CART 🛍
+               Cart
               </div>
               <div className="Header__summary__line">
-                Number of items: <span className="snipcart-total-items"></span>
-              </div>
-              <div className="Header__summary__line">
-                Total price: <span className="snipcart-total-price"></span>
+                <span className="snipcart-total-items">3</span>
               </div>
             </div>
           </div>
@@ -36,8 +34,7 @@ const Layout = ({ children, site }) => (
       </div>
       <div className="Wrap" >
         <div className="Footer">
-          This website is just an example project to demonstrate how you can 
-          integrate <a href="https://www.gatsbyjs.org/">Gatsby</a>, <a href="https://snipcart.com/">Snipcart</a> and <a href="https://www.datocms.com">DatoCMS</a>.
+          Footer Love 
         </div>
       </div>
     </div>
