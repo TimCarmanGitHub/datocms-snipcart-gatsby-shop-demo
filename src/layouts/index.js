@@ -2,28 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
-import { StaticQuery } from 'gatsby'
-import {Button} from 'antd'
-import 'antd/dist/antd.css'
 
 import '../style/index.scss'
-import ShoppingCart from "../assets/images/add_shopping_cart-black-18dp.svg"
 
 const Layout = ({ children, site }) => (
-  <StaticQuery
-  query={graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          menuLinks {
-            name
-            link
-          }
-        }
-      }
-    }
-  `}
-  render={data => (
   <div>
     <Helmet title="Snipcart + DatoCMS + GatsbyJS Example" />
     <div className="Container">
@@ -35,17 +17,13 @@ const Layout = ({ children, site }) => (
                 {site.siteMetadata.siteName}
               </Link>
             </h1>
-            <div className="Header__Links">
-    <Link menuLinks={site.siteMetadata.menuLinks} />
             <div className="Header__summary snipcart-summary snipcart-checkout">
               <div className="Header__summary__title">
-                <img src={ShoppingCart} alt="Add To Shopping Cart" />
+               Cart
               </div>
-              
               <div className="Header__summary__line">
-                <span className="snipcart-total-items"></span>
+                <span className="snipcart-total-items">3</span>
               </div>
-            </div>
             </div>
           </div>
         </div>
@@ -56,15 +34,10 @@ const Layout = ({ children, site }) => (
       <div className="Wrap" >
         <div className="Footer">
           Footer Love 
-          <Button type="primary">Primary</Button>
         </div>
       </div>
     </div>
-  </div>  
-  )}
-
-
-  />
+  </div>
 )
 
 Layout.propTypes = {
@@ -72,4 +45,3 @@ Layout.propTypes = {
 }
 
 export default Layout
-
