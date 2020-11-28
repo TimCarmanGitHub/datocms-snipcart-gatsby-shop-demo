@@ -1,46 +1,27 @@
-.Header {
-  background: #cad2c5;
-  color: white;
-  border-bottom: 3px solid white;
-  // font-family: "Oswald";
-}
+// .Header {
+//   background: #cad2c5;
+// }
 
-.Header__body {
-  display: flex;
-  align-items: center;
-}
+// .Header__body {
+//   display: flex;
+//   align-items: center;
+// }
 
-.Header__summary {
-  text-decoration: none;
-  color: white;
-  text-align: center;
-  cursor: pointer;
+// .Header__summary {
+//   text-decoration: none;
+//   color: white;
+//   text-align: center;
+//   cursor: pointer;
 
-  &:hover {
-    text-decoration: underline;
-  }
-}
+//   &:hover {
+//     text-decoration: underline;
+//   }
+// }
 
-.Header__summary__line {
-  font-size: 0.8em;
-}
+// .Header__links {
+//   display: flex;
+// }
 
-@keyframes noise-anim {
-  $steps: 20;
-
-  @for $i from 0 through $steps {
-    #{percentage($i * (1 / $steps))} {
-      clip: rect(random(100) + px, 9999px, random(100) + px, 0);
-    }
-  }
-}
-
-@keyframes noise-anim-2 {
-  $steps: 20;
-
-  @for $i from 0 through $steps {
-    #{percentage($i * (1/$steps))} {
-      clip: rect(random(100) + px, 9999px, random(100) + px, 0);
-    }
-  }
-}
+// .Header__summary__line {
+//   font-size: 0.8em;
+// }
