@@ -45,7 +45,7 @@ render={data => (
                 <div className="Product__name">
                   {product.name}
                   <div className="Product__price">
-                    {product.price}€
+                    ${product.price}
                   </div>
                 </div>
                 <button data-item-id={product.id}

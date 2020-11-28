@@ -3,6 +3,32 @@ require("dotenv").config();
 module.exports = {
   siteMetadata: {
     siteName: 'Eternal Journal',
+    menuLinks:[
+      {
+name:'home',
+ link:'/'
+},
+{
+name:'subscription',
+ link:'/buy-journal-box'
+ },
+{
+name:'guided',
+ link:'/buy-guided-journals'
+ } ,
+{
+name:'blog',
+ link:'/blog'
+ },
+{
+name:'forum',
+ link:'/forum'
+ },
+{
+name:'us',
+ link:'/why-choose-eternal'
+ }
+ ]
   },
   plugins: [
     'gatsby-plugin-sass',
@@ -18,5 +44,25 @@ module.exports = {
         autopop: true
       }
     },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Oswald`,
+            subsets: [`latin`],
+          },
+          {
+            family: `Sorts Mill Goudys`,
+            variants: [`400`, `400i`]
+          },
+          {
+            family: `Quicksand`,
+            variants: [`300`]
+          },
+     
+        ],
+      }
+    }
   ],
 }
